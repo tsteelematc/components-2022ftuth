@@ -13,10 +13,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 
 
+import { TjsMultiplicationComponent } from './tjs-multiplication/tjs-multiplication.component';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent
+    , TjsMultiplicationComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
