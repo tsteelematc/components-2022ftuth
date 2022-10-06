@@ -4,11 +4,14 @@
 <div
     *ngFor="let pt of availablePizzaToppings"
 >
-    <input 
+    <label>
+        <input 
         type="checkbox"
         [(ngModel)]="pt.checked"
     />
     {{ pt.name }} ({{ pt.price | currency }})
+    </label>
+    
 </div>
 <hr>
 <button
