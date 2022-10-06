@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface PizzaToppingsDisplay {
+export interface PizzaToppingDisplay {
   name: string;
   price: number;
   checked: boolean;
@@ -13,7 +13,7 @@ export class PizzaService {
 
   constructor() { }
 
-  loadPizzaToppings = (): PizzaToppingsDisplay[] => {
+  loadPizzaToppings = (): PizzaToppingDisplay[] => {
     const pizzaToppingsFromWeb = [
       {
         name: 'Pepperoni',
