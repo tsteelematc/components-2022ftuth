@@ -1,5 +1,5 @@
 <h3>Available Pizza toppings</h3>
 
 <div *ngFor="let pt of availablePizzaToppings">
- {{ pt.name}} ({{ pt.price}})
+ {{ pt.name}} ({{ pt.price | currency }})
 </div>
