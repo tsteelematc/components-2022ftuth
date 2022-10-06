@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaService } from '../pizza.service';
 
 @Component({
   selector: 'pizza-toppings',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzaToppingsComponent implements OnInit {
 
-  constructor() { }
+  // Magic DI, with TS ctor scoped parameters
+  constructor(
+    public pizzaSvc: PizzaService
+  ) { }
 
   ngOnInit(): void {
+	const pt = this.pizzaSvc.loadPizzaToppings();
+	console.log(pt);
+
   }
 
 }
