@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface PizzaToppingDisplay {
+export interface PizzaToppingDisplay {
   name: string;
   price: number;
   checked: boolean;
