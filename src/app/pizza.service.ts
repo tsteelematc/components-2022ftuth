@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
 
-interface PizzaToppingsDisplay {
+export interface PizzaToppingDisplay {
   name: string;
   price: number;
   checked: boolean;
@@ -14,7 +14,7 @@ export class PizzaService {
 
   constructor() { }
 
-  loadPizzaToppings = (): PizzaToppingsDisplay[] => { //make a webservice call eventually instaed of the array
+  loadPizzaToppings = (): PizzaToppingDisplay[] => { //make a webservice call eventually instaed of the array
     const pizzaToppingsFromWeb = [
       {
         name: 'Pepperoini'
