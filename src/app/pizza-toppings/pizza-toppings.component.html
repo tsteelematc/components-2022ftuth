@@ -1,7 +1,11 @@
-<h3>
-    Available Pizza Toppings
-</h3>
-<div
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Available Pizza Toppings
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div
     *ngFor="let pt of availablePizzaToppings"
 >
     <label
@@ -18,3 +22,6 @@
 <h4>
     Total: {{ total | currency }}
 </h4>
+    </mat-card-content>
+
+</mat-card>
