@@ -25,7 +25,6 @@ export class PizzaToppingsComponent implements OnInit {
   // TS getter or read-only property
 
   get total() {
-    console.log ('here')
     return this.availablePizzaToppings
       .filter(x => x.checked)
       .reduce ((acc,x) => acc + x.price, 0);
