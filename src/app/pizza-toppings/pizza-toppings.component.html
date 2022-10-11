@@ -4,13 +4,10 @@
     </mat-card-header>
     <mat-card-content>
         <div *ngFor="let pt of availablePizzaToppings">
-            <label name="pt.name">
-                <input 
-                    type="checkbox"
-                    [(ngModel)]="pt.checked"
-                />
+            
+            <mat-checkbox [(ngModel)]="pt.checked">
                 {{ pt.name }} ({{ pt.price | currency }})
-            </label>
+            </mat-checkbox>   
         </div>
         <br>
         
