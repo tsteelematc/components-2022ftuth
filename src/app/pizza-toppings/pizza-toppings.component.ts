@@ -22,15 +22,13 @@ export class PizzaToppingsComponent implements OnInit {
 
   availablePizzaToppings: PizzaToppingDisplay[] = [];
 
-  calculateTotal = () => {
-    this.total = this.availablePizzaToppings
-      .filter(x => x.checked)
-      .reduce(
-        (acc, x) => acc + x.price
-        , 0
-      )
-    ;
-  };
+  // TS getter or read-only property
 
-  total = 0;
-}
+  get total() {
+    console.log ('here')
+    return this.availablePizzaToppings
+      .filter(x => x.checked)
+      .reduce ((acc,x) => acc + x.price, 0);
+  }
+};
+
