@@ -6,12 +6,12 @@
         <div
             *ngFor="let pt of availablePizzaToppings"
         >
-
-        <mat-checkbox [(ngModel)]="pt.checked">        
-            {{ pt.name }} ({{ pt.price | currency }})
-        </mat-checkbox>
+            <mat-checkbox 
+                [(ngModel)]="pt.checked"
+            >        
+                {{ pt.name }} ({{ pt.price | currency }})
+            </mat-checkbox>
         </div>
-        <br>
         <h4>
             Total: {{ total | currency }}
         </h4>
