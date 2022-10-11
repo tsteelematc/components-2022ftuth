@@ -16,13 +16,17 @@ export class PizzaService {
   loadPizzaToppings = (): PizzaToppingDisplay[] => {
     const pizzaToppingsFromWeb = [
       {
-        name: 'Pepperoini'
+        name: 'Pepperoni'
         , price: 1.5
       }
       , {
         name: 'Olives'
         , price: 3
       }
+        , {
+        name: 'Mushrooms'
+        , price: 2
+        }
     ];
 
     return pizzaToppingsFromWeb.map(x => ({
