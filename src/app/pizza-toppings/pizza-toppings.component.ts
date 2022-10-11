@@ -21,16 +21,14 @@ export class PizzaToppingsComponent implements OnInit {
   }
 
   availablePizzaToppings: PizzaToppingDisplay[] = [];
-
-  calculateTotal = () => {
-    this.total = this.availablePizzaToppings
+//angular change detection
+  get total() {
+    console.log("totalProperty");
+    return this.availablePizzaToppings
       .filter(x => x.checked)
       .reduce(
         (acc, x) => acc + x.price
         , 0
-      )
-    ;
+      );
   };
-
-  total = 0;
 }

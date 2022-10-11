@@ -4,9 +4,7 @@
 <div
     *ngFor="let pt of availablePizzaToppings"
 >
-    <label
-        name="pt.name"
-    >
+    <label name="pt.name">
         <input 
             type="checkbox"
             [(ngModel)]="pt.checked"
@@ -15,11 +13,7 @@
     </label>
 </div>
 <br>
-<button
-    (click)="calculateTotal()"
->
-    Calculate Total
-</button>
+
 <h4>
     Total: {{ total | currency }}
 </h4>
