@@ -22,8 +22,10 @@ export class PizzaToppingsComponent implements OnInit {
 
   availablePizzaToppings: PizzaToppingDisplay[] = [];
 
-  calculateTotal = () => {
-    this.total = this.availablePizzaToppings
+  // TS 'getter' or read-only property.
+  get total() {
+    console.log('here');
+    return this.availablePizzaToppings
       .filter(x => x.checked)
       .reduce(
         (acc, x) => acc + x.price
@@ -31,6 +33,4 @@ export class PizzaToppingsComponent implements OnInit {
       )
     ;
   };
-
-  total = 0;
 }
