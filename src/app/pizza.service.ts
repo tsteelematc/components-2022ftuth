@@ -16,7 +16,7 @@ export class PizzaService {
   loadPizzaToppings = (): PizzaToppingDisplay[] => {
     const pizzaToppingsFromWeb = [
       {
-        name: 'Pepperoini'
+        name: 'Pepperoni'
         , price: 1.5
       }
       , {
