@@ -45,4 +45,10 @@ export class PizzaToppingsComponent implements OnInit {
       ...x
       , checked: false
     }));
+
+  toggleAll = (check: boolean) => this.availablePizzaToppings = 
+    this.availablePizzaToppings.map(x => ({
+      ...x
+      , checked: check
+    }));
 }
