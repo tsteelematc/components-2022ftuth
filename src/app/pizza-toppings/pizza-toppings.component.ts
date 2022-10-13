@@ -33,17 +33,13 @@ export class PizzaToppingsComponent implements OnInit {
       );
     };
   
-    checkAll = () => this.availablePizzaToppings =
+    toggleAll = (check: boolean) => this.availablePizzaToppings =
     this.availablePizzaToppings.map(x => ({
-      ...x , 
-      checked: true
+      ...x 
+      , checked: check
     }));
 
-    uncheckAll = () => this.availablePizzaToppings =
-    this.availablePizzaToppings.map(x => ({
-      ...x , 
-      checked: false
-    }));
+    
 }
 
 
