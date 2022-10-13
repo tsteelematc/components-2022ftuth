@@ -29,10 +29,8 @@ export class PizzaToppingsComponent implements OnInit {
       .filter(x => x.checked)
       .reduce ((acc,x) => acc + x.price, 0);
   };
-  checkAll = () => this.availablePizzaToppings = 
-    this.availablePizzaToppings.map(x => ({...x, checked: true}));
+  toggleAll = (check: boolean) => this.availablePizzaToppings = 
+    this.availablePizzaToppings.map(x => ({...x, checked: check}));
     
-    uncheckAll = () => this.availablePizzaToppings = 
-    this.availablePizzaToppings.map(x => ({...x, checked: false}));
 };
 
