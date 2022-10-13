@@ -5,8 +5,7 @@
     <mat-card-content>
         <button
             mat-mini-fab
-            (click)="checkAll()"
-            (click)="toggleAll(false)"
+            (click)="toggleAll(true)"
         >
             All
         </button>
@@ -14,7 +13,7 @@
         <button
             mat-mini-fab
             color="secondary"
-            (click)="uncheckAll()"
+            (click)="toggleAll(false)"
         >
             None
         </button>
