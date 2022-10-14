@@ -12,4 +12,5 @@ export class HkChooseYourDeliveryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedDeliveryMethod = '';
 }
