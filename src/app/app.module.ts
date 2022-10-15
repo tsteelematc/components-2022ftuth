@@ -11,12 +11,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { PizzaCrustTypeComponent } from './pizza-crust-type/pizza-crust-type.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaToppingsComponent
+    PizzaToppingsComponent,
+    PizzaCrustTypeComponent
   ],
   imports: [
     BrowserModule,
