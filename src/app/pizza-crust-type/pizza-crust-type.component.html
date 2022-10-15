@@ -1,1 +1,17 @@
-<p>pizza-crust-type works!</p>
+<mat-card>
+    <mat-card-title>
+        Pizza Crust
+    </mat-card-title>
+    <mat-card-content>
+        <div *ngFor="let pc of availablePizzaCrusts">
+            <mat-checkbox [(ngModel)]="pc.checked">
+                {{ pc.name }}
+            </mat-checkbox>
+        </div>
+        <br />
+        <button mat-raised-button color="secondary" (click)="toggleAll(false)">
+            Clear Crusts
+        </button>
+
+    </mat-card-content>
+</mat-card>

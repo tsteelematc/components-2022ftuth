@@ -17,11 +17,23 @@ export class PizzaService {
     const pizzaToppingsFromWeb = [
       {
         name: 'Pepperoini'
-        , price: 1.5
+        , price: 2.50
+      }
+      , {
+        name: 'Italian Sausage'
+        , price: 2.00
+      }
+      , {
+        name: 'Ham'
+        , price: 3.00
+      }
+      , {
+        name: 'Green Peppers'
+        , price: 1.00
       }
       , {
         name: 'Olives'
-        , price: 3
+        , price: 1.00
       }
     ];
 

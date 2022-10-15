@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaCrustService, PizzaCrustType } from '../pizza.crust.service';
 
 @Component({
   selector: 'app-pizza-crust-type',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzaCrustTypeComponent implements OnInit {
 
-  constructor() { }
+  // Magic DI, with TS ctor scoped parameters...
+  constructor(
+    public pizzaCrustSvc: PizzaCrustService
+  ) { }
 
   ngOnInit(): void {
+    const pc = this.pizzaCrustSvc.loadPizzaCrusts();
+    console.log(pc);
+
+    this.availablePizzaCrusts = pc;
   }
+
+  availablePizzaCrusts: PizzaCrustType[] = [];
+
+  // TS 'getter' or read-only property.
+  get crust() {
+    return this.availablePizzaCrusts
+      .filter(x => x.checked)
+    ;
+  };
+
+  toggleAll = (check: boolean) => this.availablePizzaCrusts =
+    this.availablePizzaCrusts.map(x => ({
+      ...x
+      , checked: check
+    }));  
 
 }
