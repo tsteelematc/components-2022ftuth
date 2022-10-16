@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
-import { PizzaCrustTypeComponent } from './pizza-crust-type/pizza-crust-type.component';
+import { PizzaCrustTypeComponent } from './ma-pizza-crust-type/pizza-crust-type.component';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
