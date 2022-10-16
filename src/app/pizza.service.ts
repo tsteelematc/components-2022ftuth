@@ -6,9 +6,7 @@ export interface PizzaToppingDisplay {
   checked: boolean;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class PizzaService {
 
   constructor() { }

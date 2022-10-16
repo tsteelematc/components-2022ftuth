@@ -1,20 +1,18 @@
 <mat-card>
     <mat-card-title>
-        sp-addition works!
+        Star Wars Characters
     </mat-card-title>
     <mat-card-content>
-        <button mat-mini-fab>Start</button>  <!--(click)=""-->
-    
-        <br>
-        <br>
-        <!-- <div *ngFor="let pt of availablePizzaToppings"> -->
-            
-            <!-- <mat-checkbox  [(ngModel)]="pt.checked">
-                {{ pt.name }} ({{ pt.price | currency }})
-            </mat-checkbox> -->
-        <!-- </div> -->
-        <h4>
-            <!-- Total: {{ total | currency }} -->
-        </h4>
+        <div *ngFor="let ci of currentCharacter">
+            <select (onchange)="currentMovie()">
+                <option default>Pick a Character</option>
+                <option>{{ci.name}}</option>
+                <option>{{ci.name}}</option>
+            </select>
+            <h3>You selected: {{ci.name}}</h3>
+            <p>The movies the character is in: {{ci.movie}}</p>
+        </div>
     </mat-card-content>
 </mat-card>
+<!-- 
+[(value)]="selected" -->
