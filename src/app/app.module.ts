@@ -13,7 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

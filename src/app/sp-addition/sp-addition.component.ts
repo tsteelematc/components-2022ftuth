@@ -1,10 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsCharacterService, characterDisplay } from '../star-wars-character.service';
 
+
+
+// export class SelectValueBindingExample {
+//   selected = 'option2';
+// }
+
+
 @Component({
   selector: 'sp-addition',
   templateUrl: './sp-addition.component.html',
-  styleUrls: ['./sp-addition.component.css']
+  styleUrls: ['./sp-addition.component.css'],
+  
 })
 export class SPAdditionComponent implements OnInit {
 
@@ -13,15 +21,13 @@ export class SPAdditionComponent implements OnInit {
 
   ngOnInit(): void {
 	const ci = this.starwarsSvc.loadCharactersInfo();
-  console.log(ci);
- 
-  this.currentCharacter = ci;
+  	console.log(ci);
+  	this.availableCharacters = ci;
   }
-  currentCharacter: characterDisplay[] = [];
+	availableCharacters: characterDisplay[] = [];
 
-  currentMovie = (movie: number[] = []) => this.currentCharacter =
-  this.currentCharacter.map(x => ({
-    ...x, movie 
-  })); 
+
+  	currentChar = () => this.availableCharacters =
+  	this.availableCharacters.map(x => ({...x})); 
 
 }

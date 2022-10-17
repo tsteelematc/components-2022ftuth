@@ -21,6 +21,16 @@ export class StarWarsCharacterService {
         name: 'Darth Vader',
         movie: [3, 4, 5, 6] // , picture: 'url'
       }
+      ,
+      {
+        name: 'Luke SkyWalker',
+        movie: [4, 5, 6] // , picture: 'url'
+      }
+      , 
+      {
+        name: 'C3PO',
+        movie: [1, 2, 3, 4, 5, 6] // , picture: 'url'
+      }
     ];
     return charactersFromWeb.map(x => ({...x}));
   }
