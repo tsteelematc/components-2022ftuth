@@ -47,11 +47,13 @@ export class SurpriseSideComponent implements OnInit {
     this.sides = [
       ...this.sides
       , sideToAdd
-    ].sort();
+    ];
 
     this.commaDelimetedSides = this.sides.join(", ")
     
-    const m = this.sides.reduce(
+    const m = [
+      ...this.sides
+    ].sort().reduce(
       (acc, x) => acc.set(
         x
         , (acc.get(x) ?? 0) + 1
