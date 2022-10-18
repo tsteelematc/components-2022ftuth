@@ -36,11 +36,17 @@ export class SurpriseSideComponent implements OnInit {
     // ;
 
     const newSide = this.availableSides[r];
+    this.addSide(newSide);
+
+  };
+
+  addSide = (sideToAdd: string) => {
+    console.log(sideToAdd);
 
     // Add it to the array of sides.
     this.sides = [
       ...this.sides
-      , newSide
+      , sideToAdd
     ].sort();
 
     this.commaDelimetedSides = this.sides.join(", ")
@@ -54,7 +60,6 @@ export class SurpriseSideComponent implements OnInit {
     );
     console.log(this.sides, [...m]);
 
-    this.groupedSides = [...m];
-
+    this.groupedSides = [...m];    
   };
 }
