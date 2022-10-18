@@ -30,5 +30,11 @@ export class SPAdditionComponent implements OnInit {
   	currentChar = "";
 	/*() => this.availableCharacters =
   	this.availableCharacters.map(x => ({...x}));  */
-
+	currentCharChanged = () => {
+		this.moviesForCurrentChar = 
+		this.availableCharacters.filter(x => x.name === this.currentChar)[0].movie.join(" ,");
+		// this.moviesForCurrentChar = 
+		// (this.availableCharacters.find(x => x.name === this.currentChar)??{movie[]}).movie.join(" ,");
+	};
+	moviesForCurrentChar = "";
 }
