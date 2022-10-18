@@ -14,7 +14,17 @@
             <li
                 *ngFor="let s of groupedSides"
             >
-                {{ s[0] }} ({{ s[1] }})
+                {{ s[0] }}
+
+                <button
+                    mat-mini-fab
+                    color="light"
+                    (click)="addSide(s[0])"
+                >
+                    +
+                </button>
+
+                ({{ s[1] }})
             </li>
         </ul>
         {{ commaDelimitedSides }}
