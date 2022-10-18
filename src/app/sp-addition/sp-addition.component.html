@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title>
+        Star Wars Characters
+    </mat-card-title>
+    <mat-card-content>
+        <mat-form-field appearance="fill">
+            <mat-label>Pick a Character</mat-label>
+            <mat-select [(value)]="currentChar">
+                <mat-option *ngFor="let ci of availableCharacters" value={{ci.name}}>{{ci.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>            
+        <p>You selected: {{currentChar}}</p>
+        <!-- <mat-hint>{{currentChar?.movie}}</mat-hint> -->
+        <!-- <p>The movies the character is in: {{currentChar.value?.movie}}</p> -->
+    </mat-card-content>
+</mat-card>

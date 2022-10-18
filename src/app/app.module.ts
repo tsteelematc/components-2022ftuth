@@ -11,12 +11,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { SurpriseSideComponent } from './surprise-side/surprise-side.component';
+import { MyFavoriteToppingComponent } from './my-favorite-topping/my-favorite-topping.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaToppingsComponent
+    PizzaToppingsComponent,
+    SurpriseSideComponent,
+    MyFavoriteToppingComponent
   ],
   imports: [
     BrowserModule,
