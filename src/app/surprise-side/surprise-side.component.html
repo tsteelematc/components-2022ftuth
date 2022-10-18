@@ -10,6 +10,14 @@
             Side
         </button>
         &nbsp;&nbsp;
-        {{ side }}
+        <ul>
+            <li
+                *ngFor="let s of groupedSides"
+            >
+                {{ s[0] }} ({{ s[1] }})
+            </li>
+        </ul>
+        <br>
+        {{ commaDelimetedSides }}
     </mat-card-content>
 </mat-card>

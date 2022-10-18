@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaService } from '../pizza.service';
 
 @Component({
   selector: 'app-surprise-side',
@@ -7,23 +8,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurpriseSideComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private pizzaSvc: PizzaService
+  ) { }
+
+  availableSides: string[] = [];
 
   ngOnInit(): void {
+    this.availableSides = this.pizzaSvc.loadSides();
   }
 
-  side = "None";
+  sides: string[] = [];
+  groupedSides: [string, number][] = [];
+  commaDelimetedSides = "";
 
   randomSide = () => {
 
     // Generate a random number between 0 and 2.
-    const r = Math.floor(Math.random() * 3);
+    const r = Math.floor(Math.random() * this.availableSides.length);
 
     // Update the side property based on that number;
-    this.side = r === 0
-      ? "Garlic Bread"
-      : r === 1
-        ? "Salad"
-        : "Soup"
+    // const newSide = r === 0
+    //   ? "Garlic Bread"
+    //   : r === 1
+    //     ? "Salad"
+    //     : "Soup"
+    // ;
+
+    const newSide = this.availableSides[r];
+
+    // Add it to the array of sides.
+    this.sides = [
+      ...this.sides
+      , newSide
+    ].sort();
+
+    this.commaDelimetedSides = this.sides.join(", ")
+    
+    const m = this.sides.reduce(
+      (acc, x) => acc.set(
+        x
+        , (acc.get(x) ?? 0) + 1
+      )
+      , new Map<string, number>()
+    );
+    console.log(this.sides, [...m]);
+
+    this.groupedSides = [...m];
+
   };
 }
