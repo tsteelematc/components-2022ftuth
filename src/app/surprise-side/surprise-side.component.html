@@ -17,13 +17,20 @@
                 {{ s[0] }}
                 
                 <button
-                    mat-mini-fab
+                    mat-button
+                    color="light"
+                    (click)="removeSide(s[0])"
+                >
+                    -
+                </button>
+                {{ s[1] }}
+                <button
+                    mat-button
                     color="light"
                     (click)="addSide(s[0])"
                 >
                     +
                 </button>
-                ({{ s[1] }})
             </li>
         </ul>
         <br>

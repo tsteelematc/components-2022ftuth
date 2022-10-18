@@ -62,4 +62,30 @@ export class SurpriseSideComponent implements OnInit {
 
     this.groupedSides = [...m];    
   };
+
+  removeSide = (sideToRemove: string) => {
+    console.log(sideToRemove);
+
+    const reversedSides = [...this.sides].reverse();
+    const indexOfReversedItemToRemove = reversedSides.findIndex(x => x === sideToRemove);
+
+    // Add it to the array of sides.
+    this.sides = reversedSides.filter(
+      (x, i) => i !== indexOfReversedItemToRemove
+    ).reverse();
+
+    this.commaDelimetedSides = this.sides.join(", ")
+    
+    const m = this.sides.reduce(
+      (acc, x) => acc.set(
+        x
+        , (acc.get(x) ?? 0) + 1
+      )
+      , new Map<string, number>()
+    );
+    console.log(this.sides, [...m]);
+
+    this.groupedSides = [...m];    
+  };
+
 }
