@@ -15,7 +15,7 @@ export class PizzaToppingsComponent implements OnInit {
 
   ngOnInit(): void {
     const pt = this.pizzaSvc.loadPizzaToppings();
-    console.log(pt);
+    // console.log(pt);
 
     this.availablePizzaToppings = pt;
   }
@@ -24,7 +24,7 @@ export class PizzaToppingsComponent implements OnInit {
 
   // TS 'getter' or read-only property.
   get total() {
-    console.log('here');
+    // console.log('here');
     return this.availablePizzaToppings
       .filter(x => x.checked)
       .reduce(
