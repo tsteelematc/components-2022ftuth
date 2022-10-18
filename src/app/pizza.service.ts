@@ -30,9 +30,13 @@ export class PizzaService {
       , checked: false
     }));
   }
+
   loadSides = () => {
     return [
-        "Garlic Bread", "Salad", "Soup", "Cheese Sticks"
+      "Garlic Bread"
+      , "Salad"
+      , "Soup"
+      , "Cinnamon Sticks"
     ];
-  }
+  };
 }

@@ -14,40 +14,80 @@ export class SurpriseSideComponent implements OnInit {
 
   availableSides: string[] = [];
 
-
   ngOnInit(): void {
     this.availableSides = this.pizzaSvc.loadSides();
   }
-  sides: string [] = [];
-  groupedSides: [string, number] [] = [];
+
+  sides: string[] = [];
+  groupedSides: [string, number][] = [];
+  commaDelimetedSides = "";
 
   randomSide = () => {
 
-    // generate a random number between 1 and 3 
+    // Generate a random number between 0 and 2.
     const r = Math.floor(Math.random() * this.availableSides.length);
 
-    // update the side property based on that number 
-   // const newSide = r === 0 ? "Garlic Bread" : r === 1 ? "Salad" : "Soup";
+    // Update the side property based on that number;
+    // const newSide = r === 0
+    //   ? "Garlic Bread"
+    //   : r === 1
+    //     ? "Salad"
+    //     : "Soup"
+    // ;
 
-   const newSide = this.availableSides[r];
+    const newSide = this.availableSides[r];
+    this.addSide(newSide);
 
-  
+  };
 
-    // add it to the array of sides.
+  addSide = (sideToAdd: string) => {
+    console.log(sideToAdd);
+
+    // Add it to the array of sides.
     this.sides = [
-    ...this.sides, newSide
+      ...this.sides
+      , sideToAdd
     ];
 
-    const m = this.sides.reduce (
-        (acc, x) => acc.set (
-            x, 
-            (acc.get (x) ?? 0)   + 1
-    ), new Map <string, number>()
+    this.commaDelimetedSides = this.sides.join(", ")
+    
+    const m = [
+      ...this.sides
+    ].sort().reduce(
+      (acc, x) => acc.set(
+        x
+        , (acc.get(x) ?? 0) + 1
+      )
+      , new Map<string, number>()
     );
-    console.log (this.sides, m);
+    console.log(this.sides, [...m]);
 
-    this.groupedSides = [...m];
+    this.groupedSides = [...m];    
+  };
 
-    };
+  removeSide = (sideToRemove: string) => {
+    console.log(sideToRemove);
+
+    const reversedSides = [...this.sides].reverse();
+    const indexOfReversedItemToRemove = reversedSides.findIndex(x => x === sideToRemove);
+
+    // Add it to the array of sides.
+    this.sides = reversedSides.filter(
+      (x, i) => i !== indexOfReversedItemToRemove
+    ).reverse();
+
+    this.commaDelimetedSides = this.sides.join(", ")
+    
+    const m = this.sides.reduce(
+      (acc, x) => acc.set(
+        x
+        , (acc.get(x) ?? 0) + 1
+      )
+      , new Map<string, number>()
+    );
+    console.log(this.sides, [...m]);
+
+    this.groupedSides = [...m];    
+  };
 
 }
