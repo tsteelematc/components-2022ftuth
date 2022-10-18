@@ -16,27 +16,17 @@ export class PizzaService {
   loadPizzaToppings = (): PizzaToppingDisplay[] => {
     const pizzaToppingsFromWeb = [
       {
-        name: 'Pepperoini'
-        , price: 1.5
+        name: 'Pepperoini' , price: 1.5
       }
       , {
-        name: 'Olives'
-        , price: 3
+        name: 'Olives' , price: 3
       }
     ];
 
-    return pizzaToppingsFromWeb.map(x => ({
-      ...x
-      , checked: false
-    }));
+    return pizzaToppingsFromWeb.map(x => ({ ...x, checked: false}));
   }
 
   loadSides = () => {
-    return [
-      "Garlic Bread"
-      , "Salad"
-      , "Soup"
-      , "Cinnamon Sticks"
-    ];
-  };
+    return [ "Garlic Bread", "Salad", "Soup", "Cinnamon Sticks"];
+      };
 }

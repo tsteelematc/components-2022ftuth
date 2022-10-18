@@ -11,29 +11,17 @@
         </button>
         <br>
         <br>
-        <div
-            class="grouped-side-display"
-            *ngFor="let s of groupedSides"
+        <div class="grouped-side-display"*ngFor="let s of groupedSides"
         >
-            <span
-                class="grouped-side-display-text"
-            >
+            <span class="grouped-side-display-text">
                 {{ s[0] }}
             </span>
-            <button
-                mat-button
-                color="light"
-                (click)="removeSide(s[0])"
-            >
+            <button mat-button color="light" (click)="removeSide(s[0])">
                 -
             </button>
             {{ s[1] }}
-            <button
-                mat-button
-                color="light"
-                (click)="addSide(s[0])"
-            >
-                +
+            <button  mat-button color="light" (click)="addSide(s[0])">
+               +
             </button>
         </div>
         <br>
