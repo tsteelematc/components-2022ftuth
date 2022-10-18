@@ -23,10 +23,22 @@ export class PizzaService {
       }
     ];
 
+<<<<<<< Updated upstream
     return pizzaToppingsFromWeb.map(x => ({ ...x, checked: false}));
   }
 
   loadSides = () => {
     return [ "Garlic Bread", "Salad", "Soup", "Cinnamon Sticks"];
       };
+=======
+    return pizzaToppingsFromWeb.map(x => ({...x , checked: false
+    }));
+  }
+
+  loadSides = () => {
+    return [
+      "Garlic Bread" , "Salad" , "Soup" , "Cheese Sticks"
+    ];
+  };
+>>>>>>> Stashed changes
 }
