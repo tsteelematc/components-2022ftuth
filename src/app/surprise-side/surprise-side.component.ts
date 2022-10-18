@@ -42,7 +42,6 @@ export class SurpriseSideComponent implements OnInit {
 
   addSide = (sideToAdd: string) => {
     console.log(sideToAdd);
-<<<<<<< Updated upstream
 
     // Add it to the array of sides.
     this.sides = [ ...this.sides , sideToAdd];
@@ -52,26 +51,6 @@ export class SurpriseSideComponent implements OnInit {
     const m = [...this.sides].sort().reduce(
       (acc, x) => acc.set(x, (acc.get(x) ?? 0) + 1
       ), new Map<string, number>());
-=======
-
-    // Add it to the array of sides.
-    this.sides = [
-      ...this.sides
-      , sideToAdd
-    ];
-
-    this.commaDelimetedSides = this.sides.join(", ")
-    
-    const m = [
-      ...this.sides
-    ].sort().reduce(
-      (acc, x) => acc.set(
-        x
-        , (acc.get(x) ?? 0) + 1
-      )
-      , new Map<string, number>()
-    );
->>>>>>> Stashed changes
     console.log(this.sides, [...m]);
 
     this.groupedSides = [...m];    
@@ -92,15 +71,8 @@ export class SurpriseSideComponent implements OnInit {
     
     const m = this.sides.reduce(
       (acc, x) => acc.set(
-<<<<<<< Updated upstream
         x, (acc.get(x) ?? 0) + 1
       ), new Map<string, number>()
-=======
-        x
-        , (acc.get(x) ?? 0) + 1
-      )
-      , new Map<string, number>()
->>>>>>> Stashed changes
     );
     console.log(this.sides, [...m]);
 
