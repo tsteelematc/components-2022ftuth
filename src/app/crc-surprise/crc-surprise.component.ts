@@ -17,4 +17,8 @@ export class CrcSurpriseComponent implements OnInit {
     return Math.floor(Math.random() * ( 18 - 3 + 1) + 3);
   }
 
+  rollStat = () => {
+    const rolled = this.generateNumber;
+  }
+
 }
