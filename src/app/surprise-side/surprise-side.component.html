@@ -9,30 +9,33 @@
         >
             Side
         </button>
-        &nbsp;&nbsp;
-        <ul>
-            <li
-                *ngFor="let s of groupedSides"
+        <br>
+        <br>
+        <div
+            class="grouped-side-display"
+            *ngFor="let s of groupedSides"
+        >
+            <span
+                class="grouped-side-display-text"
             >
                 {{ s[0] }}
-                
-                <button
-                    mat-button
-                    color="light"
-                    (click)="removeSide(s[0])"
-                >
-                    -
-                </button>
-                {{ s[1] }}
-                <button
-                    mat-button
-                    color="light"
-                    (click)="addSide(s[0])"
-                >
-                    +
-                </button>
-            </li>
-        </ul>
+            </span>
+            <button
+                mat-button
+                color="light"
+                (click)="removeSide(s[0])"
+            >
+                -
+            </button>
+            {{ s[1] }}
+            <button
+                mat-button
+                color="light"
+                (click)="addSide(s[0])"
+            >
+                +
+            </button>
+        </div>
         <br>
         {{ commaDelimetedSides }}
     </mat-card-content>
