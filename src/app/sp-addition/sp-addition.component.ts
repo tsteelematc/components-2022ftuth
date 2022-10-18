@@ -27,7 +27,8 @@ export class SPAdditionComponent implements OnInit {
 	availableCharacters: characterDisplay[] = [];
 
 
-  	currentChar = () => this.availableCharacters =
-  	this.availableCharacters.map(x => ({...x})); 
+  	currentChar = "";
+	/*() => this.availableCharacters =
+  	this.availableCharacters.map(x => ({...x}));  */
 
 }
