@@ -12,6 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { EjSidesComponent } from './ej-sides/ej-sides.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EjSidesComponent } from './ej-sides/ej-sides.component';
     MatCardModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
