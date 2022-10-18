@@ -3,25 +3,47 @@
         Character Stats Automatic Generator:
     </mat-card-title>
     <mat-card-content>
-        
+        <button
+            mat-mini-fab
+            (click)="generateStats()"
+        >
+            Roll
+        </button>
+        <ul
+            *ngFor="let rs of characterBaseStats"
+        >
+            <li>
+                
+                &nbsp;
+                {{ rs.name }}: {{ rs.value }}
+            </li>
+        </ul>
+        <!-- <button
+                mat-mini-fab
+                (click)=""
+            >
+                Roll
+            </button>
         <h3>            
-            Strength: {{ generateNumber }}
+            
+            &nbsp;
+            Strength: 
         </h3>
         <h3>
-            Dexterity: {{ generateNumber }}
+            Dexterity: 
         </h3>
         <h3>
-            Constitution: {{ generateNumber }}
+            Constitution: 
         </h3>
         <h3>
-            Intelligence: {{ generateNumber }}
+            Intelligence: 
         </h3>
         <h3>
-            Wisdom: {{ generateNumber }}
+            Wisdom: 
         </h3>
         <h3>
-            Charisma: {{ generateNumber }}
-        </h3>
+            Charisma: 
+        </h3> -->
         
     </mat-card-content>
 </mat-card>
