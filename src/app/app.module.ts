@@ -11,15 +11,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { EjSidesComponent } from './ej-sides/ej-sides.component';
 import { MatInputModule } from '@angular/material/input';
 
+import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
+import { EjSidesComponent } from './ej-sides/ej-sides.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
-    EjSidesComponent
+    EjSidesComponent,
+    TjsAdditionComponent
   ],
   imports: [
     BrowserModule,
