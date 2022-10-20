@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { StarWarsCharacterService, characterDisplay } from '../star-wars-character.service';
 
 
+// import { toRoman } from "typescript-roman-numbers-converter";
+
 
 // export class SelectValueBindingExample {
 //   selected = 'option2';
@@ -32,7 +34,10 @@ export class SPAdditionComponent implements OnInit {
   	this.availableCharacters.map(x => ({...x}));  */
 	currentCharChanged = () => {
 		this.moviesForCurrentChar = 
-		this.availableCharacters.filter(x => x.name === this.currentChar)[0].movie.join(" ,");
+		this.availableCharacters.filter(x => x.name === this.currentChar)[0].movie
+			// .map(x => toRoman(x))
+			.join(", ")
+		;
 		// this.moviesForCurrentChar = 
 		// (this.availableCharacters.find(x => x.name === this.currentChar)??{movie[]}).movie.join(" ,");
 	};
