@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PizzaToppingsComponent } from './pizza-toppings/pizza-toppings.component';
-import { SPAdditionComponent } from './sp-addition/sp-addition.component';
 
 
 import { FormsModule } from '@angular/forms';
@@ -14,12 +13,24 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
+
+import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
+import { EjSidesComponent } from './ej-sides/ej-sides.component';
+import { HkChooseYourDeliveryComponent } from './hk-choose-your-delivery/hk-choose-your-delivery.component';
+import { PizzaCrustTypeComponent } from './ma-pizza-crust-type/pizza-crust-type.component';
+import { SPAdditionComponent } from './sp-addition/sp-addition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
-    SPAdditionComponent
+    SPAdditionComponent,
+    PizzaCrustTypeComponent,
+    HkChooseYourDeliveryComponent,
+    EjSidesComponent,
+    TjsAdditionComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatCheckboxModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

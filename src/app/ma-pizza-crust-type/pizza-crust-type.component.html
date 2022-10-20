@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>
+        Pizza Crust
+    </mat-card-title>
+    <mat-card-content>
+        <div *ngFor="let pc of availablePizzaCrusts">
+            <mat-checkbox [(ngModel)]="pc.checked" (change)="termsChange($event)">
+                {{ pc.name }}
+            </mat-checkbox>
+        </div>
+        <br />
+        <button mat-raised-button color="basic" (click)="toggleAll(false)">
+            Clear Crusts
+        </button>
+
+    </mat-card-content>
+</mat-card>
