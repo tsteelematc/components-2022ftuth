@@ -14,11 +14,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
+import { EjSidesComponent } from './ej-sides/ej-sides.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
+    EjSidesComponent,
     TjsAdditionComponent
   ],
   imports: [
@@ -28,7 +30,7 @@ import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
     MatCardModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatInputModule
   ],
   providers: [],
