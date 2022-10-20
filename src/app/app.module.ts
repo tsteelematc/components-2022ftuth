@@ -11,15 +11,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
 import { EjSidesComponent } from './ej-sides/ej-sides.component';
+import { HkChooseYourDeliveryComponent } from './hk-choose-your-delivery/hk-choose-your-delivery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
+    HkChooseYourDeliveryComponent,
     EjSidesComponent,
     TjsAdditionComponent
   ],
@@ -31,6 +34,7 @@ import { EjSidesComponent } from './ej-sides/ej-sides.component';
     MatCheckboxModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatRadioModule,
     MatInputModule
   ],
   providers: [],

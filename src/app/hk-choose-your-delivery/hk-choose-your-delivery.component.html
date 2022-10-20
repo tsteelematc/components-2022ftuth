@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>
+       Hristijan's Additional Component
+    </mat-card-title>
+    <mat-card-content>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedDeliveryMethod">
+            <mat-radio-button value="Inside Pickup">Inside Pickup</mat-radio-button> &nbsp;
+            <mat-radio-button value="Curbside Pickup">Curbside Pickup</mat-radio-button>  &nbsp;
+            <mat-radio-button value="Delivery">Delivery</mat-radio-button>
+          </mat-radio-group>
+    </mat-card-content>
+
+    <div color="blue"> <h2> {{selectedDeliveryMethod}} </h2> </div> 
+    
