@@ -17,11 +17,13 @@ import { MatInputModule } from '@angular/material/input';
 import { TjsAdditionComponent } from './tjs-addition/tjs-addition.component';
 import { EjSidesComponent } from './ej-sides/ej-sides.component';
 import { HkChooseYourDeliveryComponent } from './hk-choose-your-delivery/hk-choose-your-delivery.component';
+import { PizzaCrustTypeComponent } from './ma-pizza-crust-type/pizza-crust-type.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
+    PizzaCrustTypeComponent,
     HkChooseYourDeliveryComponent,
     EjSidesComponent,
     TjsAdditionComponent
