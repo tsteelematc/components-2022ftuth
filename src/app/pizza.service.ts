@@ -6,9 +6,7 @@ export interface PizzaToppingDisplay {
   checked: boolean;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class PizzaService {
 
   constructor() { }
@@ -16,7 +14,7 @@ export class PizzaService {
   loadPizzaToppings = (): PizzaToppingDisplay[] => {
     const pizzaToppingsFromWeb = [
       {
-        name: 'Pepperoini'
+        name: 'Pepperoni'
         , price: 2.50
       }
       , {
