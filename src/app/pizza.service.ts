@@ -41,5 +41,13 @@ export class PizzaService {
     }));
   }
 
+  loadSides = () => {
+    return [
+      "Garlic Bread"
+      , "Salad"
+      , "Soup"
+      , "Cinnamon Sticks"
+    ];
+  };
   
 }

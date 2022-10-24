@@ -21,11 +21,13 @@ import { EjSidesComponent } from './ej-sides/ej-sides.component';
 import { HkChooseYourDeliveryComponent } from './hk-choose-your-delivery/hk-choose-your-delivery.component';
 import { PizzaCrustTypeComponent } from './ma-pizza-crust-type/pizza-crust-type.component';
 import { SPAdditionComponent } from './sp-addition/sp-addition.component';
+import { SurpriseSideComponent } from './surprise-side/surprise-side.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PizzaToppingsComponent,
+    SurpriseSideComponent,
     SPAdditionComponent,
     PizzaCrustTypeComponent,
     HkChooseYourDeliveryComponent,

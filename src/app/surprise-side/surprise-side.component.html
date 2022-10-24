@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-title>
+        Surprise Me
+    </mat-card-title>
+    <mat-card-content>
+        <button
+            mat-mini-fab
+            (click)="randomSide()"
+        >
+            Side
+        </button>
+        <br>
+        <br>
+        <div
+            class="grouped-side-display"
+            *ngFor="let s of groupedSides"
+        >
+            <span
+                class="grouped-side-display-text"
+            >
+                {{ s[0] }}
+            </span>
+            <button
+                mat-button
+                color="light"
+                (click)="removeSide(s[0])"
+            >
+                -
+            </button>
+            {{ s[1] }}
+            <button
+                mat-button
+                color="light"
+                (click)="addSide(s[0])"
+            >
+                +
+            </button>
+        </div>
+        <br>
+        {{ commaDelimetedSides }}
+    </mat-card-content>
+</mat-card>

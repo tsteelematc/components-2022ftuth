@@ -1,0 +1,9 @@
+.grouped-side-display {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.grouped-side-display-text {
+    min-width: 200px;
+}
