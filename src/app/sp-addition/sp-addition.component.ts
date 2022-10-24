@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsCharacterService, characterDisplay } from '../star-wars-character.service';
-
+import romanizeNumber from 'romanize-number';
 
 // import { toRoman } from "typescript-roman-numbers-converter";
 
@@ -35,7 +35,7 @@ export class SPAdditionComponent implements OnInit {
 	currentCharChanged = () => {
 		this.moviesForCurrentChar = 
 		this.availableCharacters.filter(x => x.name === this.currentChar)[0].movie
-			// .map(x => toRoman(x))
+			 .map(x => romanizeNumber(x))
 			.join(", ")
 		;
 		// this.moviesForCurrentChar = 
